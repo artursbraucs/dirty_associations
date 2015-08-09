@@ -1,32 +1,44 @@
 require "dirty_associations/version"
-require "active_support"
+require "active_model"
 
 module DirtyAssociations
-  extend ActiveSupport::Concern
 
-  included do
-    before_validation :check_if_associations_changed
+  def changed?
+    check_if_associations_changed
+    super
+  end
+
+  def changed_attributes
+    check_if_associations_changed
+    super
+  end
+
+  def previous_changes
+    check_if_associations_changed
+    super
+  end
+
+  def changes
+    check_if_associations_changed
+    super
+  end
+
+  def attribute_change(attr)
+    changed_attributes[attr].map(&:changes) if self.association(attr) && attribute_changed?(attr)
+  rescue ActiveRecord::AssociationNotFoundError
+    super
   end
 
   private
 
   def check_if_associations_changed
-    will_change = false
     self.class.reflect_on_all_autosave_associations.each do |reflection|
-      reflection_name = reflection.name
-      if self.association(reflection_name).loaded?
-        if reflection.collection?
-          will_change = self.send(reflection_name).any? { |record| associated_record_changed?(record) }
-        else
-          will_change = associated_record_changed?(self.send(reflection_name))
-        end
+      association_id = reflection.name
+      autosaving_targets = self.association(association_id).target
+      autosaving_targets_that_will_change = autosaving_targets.select { |t| t.new_record? || t.changed? || t.marked_for_destruction? }
+      if autosaving_targets && autosaving_targets_that_will_change.size > 0
+        @changed_attributes[association_id] = autosaving_targets_that_will_change
       end
-      attribute_will_change!(reflection_name) if will_change
     end
-  end
-
-  def associated_record_changed?(record)
-    record.class.send(:include, ActiveModel::DirtyAssociations) unless record.respond_to?(:check_if_associations_changed)
-    return record.send(:check_if_associations_changed) && record.changed?
   end
 end
