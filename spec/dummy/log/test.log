@@ -10205,3 +10205,311 @@ Migrating to CreateCoaches (20150810084050)
   [1m[35mSQL (0.6ms)[0m  UPDATE "teams" SET "updated_at" = ? WHERE "teams"."id" = ?  [["updated_at", "2015-08-10 09:35:34.466152"], ["id", 851]]
   [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 1702]]
   [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:46.953893"], ["updated_at", "2015-08-10 09:39:46.953893"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 852], ["created_at", "2015-08-10 09:39:46.983241"], ["updated_at", "2015-08-10 09:39:46.983241"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 852], ["created_at", "2015-08-10 09:39:46.987826"], ["updated_at", "2015-08-10 09:39:46.987826"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carter"], ["team_id", 852], ["created_at", "2015-08-10 09:39:47.000397"], ["updated_at", "2015-08-10 09:39:47.000397"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mCoach Load (0.3ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 852]]
+  [1m[35mTeam Load (0.3ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 852]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.017358"], ["updated_at", "2015-08-10 09:39:47.017358"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 853], ["created_at", "2015-08-10 09:39:47.022599"], ["updated_at", "2015-08-10 09:39:47.022599"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 853], ["created_at", "2015-08-10 09:39:47.027592"], ["updated_at", "2015-08-10 09:39:47.027592"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carter"], ["team_id", 853], ["created_at", "2015-08-10 09:39:47.031187"], ["updated_at", "2015-08-10 09:39:47.031187"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mCoach Load (0.1ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 853]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 853]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE "players"."team_id" = ? AND "players"."id" = 1706  [["team_id", 853]]
+  [1m[36mCoach Load (0.1ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 853]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "teams" SET "updated_at" = ? WHERE "teams"."id" = ?  [["updated_at", "2015-08-10 09:39:47.037694"], ["id", 853]]
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "players" WHERE "players"."id" = ?[0m  [["id", 1706]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.044859"], ["updated_at", "2015-08-10 09:39:47.044859"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 854], ["created_at", "2015-08-10 09:39:47.048651"], ["updated_at", "2015-08-10 09:39:47.048651"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 854], ["created_at", "2015-08-10 09:39:47.052007"], ["updated_at", "2015-08-10 09:39:47.052007"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carter"], ["team_id", 854], ["created_at", "2015-08-10 09:39:47.055849"], ["updated_at", "2015-08-10 09:39:47.055849"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mCoach Load (0.2ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 854]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 854]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE "players"."team_id" = ? AND "players"."id" = 1707[0m  [["team_id", 854]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.063244"], ["updated_at", "2015-08-10 09:39:47.063244"]]
+  [1m[35m (3.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 855], ["created_at", "2015-08-10 09:39:47.070816"], ["updated_at", "2015-08-10 09:39:47.070816"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 855], ["created_at", "2015-08-10 09:39:47.074184"], ["updated_at", "2015-08-10 09:39:47.074184"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Carter"], ["team_id", 855], ["created_at", "2015-08-10 09:39:47.077467"], ["updated_at", "2015-08-10 09:39:47.077467"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 855]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 855]]
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE "players"."team_id" = ? AND "players"."id" = 1709  [["team_id", 855]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.083820"], ["updated_at", "2015-08-10 09:39:47.083820"]]
+  [1m[36m (2.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 856], ["created_at", "2015-08-10 09:39:47.090890"], ["updated_at", "2015-08-10 09:39:47.090890"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 856], ["created_at", "2015-08-10 09:39:47.096547"], ["updated_at", "2015-08-10 09:39:47.096547"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carter"], ["team_id", 856], ["created_at", "2015-08-10 09:39:47.101461"], ["updated_at", "2015-08-10 09:39:47.101461"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36mCoach Load (0.1ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 856]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 856]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE "players"."team_id" = ? AND "players"."id" = 1711[0m  [["team_id", 856]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.108472"], ["updated_at", "2015-08-10 09:39:47.108472"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 857], ["created_at", "2015-08-10 09:39:47.112182"], ["updated_at", "2015-08-10 09:39:47.112182"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 857], ["created_at", "2015-08-10 09:39:47.115778"], ["updated_at", "2015-08-10 09:39:47.115778"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Carter"], ["team_id", 857], ["created_at", "2015-08-10 09:39:47.119341"], ["updated_at", "2015-08-10 09:39:47.119341"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 857]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 857]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.126361"], ["updated_at", "2015-08-10 09:39:47.126361"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 858], ["created_at", "2015-08-10 09:39:47.132640"], ["updated_at", "2015-08-10 09:39:47.132640"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 858], ["created_at", "2015-08-10 09:39:47.137790"], ["updated_at", "2015-08-10 09:39:47.137790"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Carter"], ["team_id", 858], ["created_at", "2015-08-10 09:39:47.141493"], ["updated_at", "2015-08-10 09:39:47.141493"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 858]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 858]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.147585"], ["updated_at", "2015-08-10 09:39:47.147585"]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 859], ["created_at", "2015-08-10 09:39:47.153861"], ["updated_at", "2015-08-10 09:39:47.153861"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 859], ["created_at", "2015-08-10 09:39:47.159619"], ["updated_at", "2015-08-10 09:39:47.159619"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Carter"], ["team_id", 859], ["created_at", "2015-08-10 09:39:47.163483"], ["updated_at", "2015-08-10 09:39:47.163483"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 859]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 859]]
+  [1m[35mPlayer Load (0.2ms)[0m  SELECT "players".* FROM "players" WHERE "players"."team_id" = ? AND "players"."id" = 1718  [["team_id", 859]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.169897"], ["updated_at", "2015-08-10 09:39:47.169897"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 860], ["created_at", "2015-08-10 09:39:47.173832"], ["updated_at", "2015-08-10 09:39:47.173832"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 860], ["created_at", "2015-08-10 09:39:47.177570"], ["updated_at", "2015-08-10 09:39:47.177570"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carter"], ["team_id", 860], ["created_at", "2015-08-10 09:39:47.182281"], ["updated_at", "2015-08-10 09:39:47.182281"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mCoach Load (0.1ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 860]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 860]]
+  [1m[36mPlayer Load (0.2ms)[0m  [1mSELECT "players".* FROM "players" WHERE "players"."team_id" = ? AND "players"."id" = 1720[0m  [["team_id", 860]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.189077"], ["updated_at", "2015-08-10 09:39:47.189077"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 861], ["created_at", "2015-08-10 09:39:47.192770"], ["updated_at", "2015-08-10 09:39:47.192770"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 861], ["created_at", "2015-08-10 09:39:47.197414"], ["updated_at", "2015-08-10 09:39:47.197414"]]
+  [1m[35m (4.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Carter"], ["team_id", 861], ["created_at", "2015-08-10 09:39:47.205243"], ["updated_at", "2015-08-10 09:39:47.205243"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mCoach Load (0.2ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 861]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 861]]
+  [1m[35mPlayer Load (0.3ms)[0m  SELECT "players".* FROM "players" WHERE "players"."team_id" = ? AND "players"."id" = 1721  [["team_id", 861]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.211783"], ["updated_at", "2015-08-10 09:39:47.211783"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 862], ["created_at", "2015-08-10 09:39:47.215783"], ["updated_at", "2015-08-10 09:39:47.215783"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 862], ["created_at", "2015-08-10 09:39:47.219392"], ["updated_at", "2015-08-10 09:39:47.219392"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carter"], ["team_id", 862], ["created_at", "2015-08-10 09:39:47.224846"], ["updated_at", "2015-08-10 09:39:47.224846"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mCoach Load (0.1ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 862]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 862]]
+  [1m[36mPlayer Load (0.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE "players"."team_id" = ? AND "players"."id" = 1723[0m  [["team_id", 862]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.231970"], ["updated_at", "2015-08-10 09:39:47.231970"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 863], ["created_at", "2015-08-10 09:39:47.235803"], ["updated_at", "2015-08-10 09:39:47.235803"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 863], ["created_at", "2015-08-10 09:39:47.239436"], ["updated_at", "2015-08-10 09:39:47.239436"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Carter"], ["team_id", 863], ["created_at", "2015-08-10 09:39:47.242813"], ["updated_at", "2015-08-10 09:39:47.242813"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 863]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 863]]
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 863]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.248713"], ["updated_at", "2015-08-10 09:39:47.248713"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 864], ["created_at", "2015-08-10 09:39:47.252385"], ["updated_at", "2015-08-10 09:39:47.252385"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 864], ["created_at", "2015-08-10 09:39:47.255727"], ["updated_at", "2015-08-10 09:39:47.255727"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carter"], ["team_id", 864], ["created_at", "2015-08-10 09:39:47.261792"], ["updated_at", "2015-08-10 09:39:47.261792"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36mCoach Load (0.2ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 864]]
+  [1m[35mTeam Load (0.2ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 864]]
+  [1m[36mCoach Load (0.5ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 864]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.276479"], ["updated_at", "2015-08-10 09:39:47.276479"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 865], ["created_at", "2015-08-10 09:39:47.281516"], ["updated_at", "2015-08-10 09:39:47.281516"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 865], ["created_at", "2015-08-10 09:39:47.285306"], ["updated_at", "2015-08-10 09:39:47.285306"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Carter"], ["team_id", 865], ["created_at", "2015-08-10 09:39:47.291160"], ["updated_at", "2015-08-10 09:39:47.291160"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 865]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 865]]
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 865]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "coaches" SET "team_id" = ?, "updated_at" = ? WHERE "coaches"."id" = ?  [["team_id", nil], ["updated_at", "2015-08-10 09:39:47.296540"], ["id", 218]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.300892"], ["updated_at", "2015-08-10 09:39:47.300892"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 866], ["created_at", "2015-08-10 09:39:47.305007"], ["updated_at", "2015-08-10 09:39:47.305007"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 866], ["created_at", "2015-08-10 09:39:47.308575"], ["updated_at", "2015-08-10 09:39:47.308575"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Carter"], ["team_id", 866], ["created_at", "2015-08-10 09:39:47.312076"], ["updated_at", "2015-08-10 09:39:47.312076"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 866]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 866]]
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 866]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "coaches" SET "team_id" = ?, "updated_at" = ? WHERE "coaches"."id" = ?  [["team_id", nil], ["updated_at", "2015-08-10 09:39:47.317430"], ["id", 219]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.321472"], ["updated_at", "2015-08-10 09:39:47.321472"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 867], ["created_at", "2015-08-10 09:39:47.325483"], ["updated_at", "2015-08-10 09:39:47.325483"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 867], ["created_at", "2015-08-10 09:39:47.331414"], ["updated_at", "2015-08-10 09:39:47.331414"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Carter"], ["team_id", 867], ["created_at", "2015-08-10 09:39:47.336822"], ["updated_at", "2015-08-10 09:39:47.336822"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 867]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 867]]
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 867]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.342721"], ["updated_at", "2015-08-10 09:39:47.342721"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 868], ["created_at", "2015-08-10 09:39:47.346917"], ["updated_at", "2015-08-10 09:39:47.346917"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 868], ["created_at", "2015-08-10 09:39:47.350424"], ["updated_at", "2015-08-10 09:39:47.350424"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carter"], ["team_id", 868], ["created_at", "2015-08-10 09:39:47.354202"], ["updated_at", "2015-08-10 09:39:47.354202"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mCoach Load (0.2ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 868]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 868]]
+  [1m[36mCoach Load (0.1ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 868]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.362626"], ["updated_at", "2015-08-10 09:39:47.362626"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 869], ["created_at", "2015-08-10 09:39:47.366445"], ["updated_at", "2015-08-10 09:39:47.366445"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 869], ["created_at", "2015-08-10 09:39:47.369951"], ["updated_at", "2015-08-10 09:39:47.369951"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Carter"], ["team_id", 869], ["created_at", "2015-08-10 09:39:47.374691"], ["updated_at", "2015-08-10 09:39:47.374691"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 869]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 869]]
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 869]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.381006"], ["updated_at", "2015-08-10 09:39:47.381006"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 870], ["created_at", "2015-08-10 09:39:47.384839"], ["updated_at", "2015-08-10 09:39:47.384839"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 870], ["created_at", "2015-08-10 09:39:47.388424"], ["updated_at", "2015-08-10 09:39:47.388424"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Carter"], ["team_id", 870], ["created_at", "2015-08-10 09:39:47.391931"], ["updated_at", "2015-08-10 09:39:47.391931"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36mCoach Load (0.2ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 870]]
+  [1m[35mTeam Load (0.1ms)[0m  SELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1  [["id", 870]]
+  [1m[36mCoach Load (0.2ms)[0m  [1mSELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1[0m  [["team_id", 870]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "teams" ("title", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["title", "Real Madrid"], ["created_at", "2015-08-10 09:39:47.400512"], ["updated_at", "2015-08-10 09:39:47.400512"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "Ronaldo"], ["number", 7], ["position", "S"], ["team_id", 871], ["created_at", "2015-08-10 09:39:47.405136"], ["updated_at", "2015-08-10 09:39:47.405136"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "players" ("name", "number", "position", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Benzema"], ["number", 10], ["position", "S"], ["team_id", 871], ["created_at", "2015-08-10 09:39:47.408627"], ["updated_at", "2015-08-10 09:39:47.408627"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "coaches" ("name", "team_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Carter"], ["team_id", 871], ["created_at", "2015-08-10 09:39:47.412049"], ["updated_at", "2015-08-10 09:39:47.412049"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 871]]
+  [1m[36mTeam Load (0.1ms)[0m  [1mSELECT  "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT 1[0m  [["id", 871]]
+  [1m[35mCoach Load (0.1ms)[0m  SELECT  "coaches".* FROM "coaches" WHERE "coaches"."team_id" = ? LIMIT 1  [["team_id", 871]]

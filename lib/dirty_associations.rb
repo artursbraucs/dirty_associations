@@ -13,7 +13,7 @@ module DirtyAssociations
   end
 
   def attribute_change(attr)
-    changed_association = self.association(attr)
+    changed_association = association(attr)
     if changed_association && attribute_changed?(attr)
       if changed_association.reflection.collection?
         changed_attributes[attr].map(&:changes)
