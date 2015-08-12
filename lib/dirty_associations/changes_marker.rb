@@ -3,11 +3,13 @@ module DirtyAssociations
   module ChangesMarker
     include ChangedAssociations
 
+    # catch assignment for collection association and mark changes
     def assign_nested_attributes_for_collection_association(*args)
       super
       mark_associations_changes
     end
 
+    # catch assignment for one to one association and mark changes
     def assign_nested_attributes_for_one_to_one_association(*args)
       super
       mark_associations_changes

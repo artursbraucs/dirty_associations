@@ -1,6 +1,5 @@
 module DirtyAssociations
-  # Overwrite ActiveModel::Dirty#attribute_change method
-  # Returns association target active record changes
+  # :nodoc
   module ChangedAssociations
     def attribute_change(attr)
       changed_association = association(attr)
