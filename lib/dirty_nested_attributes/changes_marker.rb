@@ -1,4 +1,4 @@
-module DirtyAssociations
+module DirtyNestedAttributes
   # Marks association record changes with ActiveRecord::Dirty behavior
   module ChangesMarker
     include ChangedAssociations

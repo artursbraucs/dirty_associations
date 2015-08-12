@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'dirty_associations/version'
+require 'dirty_nested_attributes/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'dirty_associations'
-  spec.version       = DirtyAssociations::VERSION
+  spec.name          = 'dirty_nested_attributes'
+  spec.version       = DirtyNestedAttributes::VERSION
   spec.authors       = ['Arturs Braucs']
   spec.email         = ['arturs.braucs@gmail.com']
 

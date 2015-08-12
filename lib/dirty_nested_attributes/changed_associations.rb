@@ -1,4 +1,4 @@
-module DirtyAssociations
+module DirtyNestedAttributes
   # :nodoc
   module ChangedAssociations
     def attribute_change(attr)

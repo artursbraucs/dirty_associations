@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe DirtyAssociations do
+describe DirtyNestedAttributes do
 
   before do
     @team = Team.create(title: 'Real Madrid')
@@ -11,7 +11,7 @@ describe DirtyAssociations do
   end
 
   it 'has a version number' do
-    expect(DirtyAssociations::VERSION).not_to be nil
+    expect(DirtyNestedAttributes::VERSION).not_to be nil
   end
 
   context 'has_many association' do

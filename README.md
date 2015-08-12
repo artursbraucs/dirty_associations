@@ -1,4 +1,4 @@
-# DirtyAssociations
+# DirtyNestedAttributes
 
 Tracks nested association changes in ActiveRecord objects.
 Marks all changes in parent if something in child (one to one, one to many) records has changed.
@@ -8,7 +8,7 @@ Marks all changes in parent if something in child (one to one, one to many) reco
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'dirty_associations'
+gem 'dirty_nested_attributes'
 ```
 
 And then execute:
@@ -17,15 +17,15 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install dirty_associations
+    $ gem install dirty_nested_attributes
 
 ## Usage
 
-Include `DirtyAssociations` in your active record class
+Include `DirtyNestedAttributes` in your active record class
 
 ```ruby
 class Post < ActiveRecord::Base
-  include DirtyAssociations
+  include DirtyNestedAttributes
 
   has_many :comments
   accepts_nested_attributes_for :comments
@@ -45,7 +45,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/artursbraucs/dirty_associations. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/artursbraucs/dirty_nested_attributes. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 
 ## License

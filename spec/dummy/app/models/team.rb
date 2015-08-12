@@ -1,5 +1,5 @@
 class Team < ActiveRecord::Base
-  include DirtyAssociations
+  include DirtyNestedAttributes
 
   has_many :players
   has_one :coach
