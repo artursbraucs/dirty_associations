@@ -1,5 +1,11 @@
 # DirtyNestedAttributes
 
+[![Build Status](https://travis-ci.org/artursbraucs/dirty_nested_attributes.svg)](https://travis-ci.org/artursbraucs/dirty_nested_attributes)
+[![Gem Version](https://badge.fury.io/rb/dirty_nested_attributes.svg)](http://badge.fury.io/rb/dirty_nested_attributes)
+[![Code Climate](https://codeclimate.com/github/artursbraucs/dirty_nested_attributes/badges/gpa.svg)](https://codeclimate.com/github/artursbraucs/dirty_nested_attributes)
+[![Test Coverage](https://codeclimate.com/github/artursbraucs/dirty_nested_attributes/badges/coverage.svg)](https://codeclimate.com/github/artursbraucs/dirty_nested_attributes/coverage)
+
+
 Tracks nested association changes in ActiveRecord objects.
 Marks all changes in parent if something in child (one to one, one to many) records has changed.
 

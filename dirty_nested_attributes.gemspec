@@ -28,4 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec-rails'
   spec.add_development_dependency 'sqlite3'
   spec.add_development_dependency 'rails', '>= 4'
+  spec.add_development_dependency 'codeclimate-test-reporter'
 end
