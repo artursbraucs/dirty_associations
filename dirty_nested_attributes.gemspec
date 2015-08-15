@@ -26,7 +26,11 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'rspec-rails'
-  spec.add_development_dependency 'sqlite3'
+  if RUBY_PLATFORM == 'java'
+    spec.add_development_dependency 'activerecord-jdbcsqlite3-adapter'
+  else
+    spec.add_development_dependency 'sqlite3'
+  end
   spec.add_development_dependency 'rails', '>= 4'
   spec.add_development_dependency 'codeclimate-test-reporter'
 end

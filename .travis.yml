@@ -6,6 +6,6 @@ rvm:
   - 2.0.0
   - 1.9.3
   - jruby-19mode
-  - rbx-2.1.1
+  - jruby-9.0.0.0
 before_install: gem install bundler -v 1.10.6
 script: CODECLIMATE_REPO_TOKEN=02b780e94df13ff7ac68ba93f283371ded48bad99238b152890be5853040f5ec bundle exec rspec spec
